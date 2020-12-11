@@ -15,6 +15,9 @@ import os
 @allure.epic('piner--史诗')
 @allure.feature('注册模块')
 class Test_register:
+    # @pytest.mark('register')
+    @allure.title('注册模块标题')
+    @allure.story('注册模块的故事')
     @pytest.mark.parametrize('indata,re_reps',ExcelRed.Excel(fileNma_register).red_indata())
     def test_register(self,indata,re_reps):
         re_data=RequestsApi.api().requests_api(setting.PATH_register,indata)

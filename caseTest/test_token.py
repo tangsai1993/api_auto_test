@@ -15,13 +15,16 @@ from common.ExcelRed import Excel
 from common.Path import CASE_PATH
 from src.Token import Token
 from conf.setting import HOST
-class Test_token:
 
+@allure.feature('查看余额')
+class Test_token:
     #第一种方法
     def setup(self,): #每条用例执行之前调用一次--无法实现参数化
         print('每条用例执行之前都执行')
         self.token=login('userName=admin&password=1234')#'userName=admin&password=1234'
+    # @pytest.mark('token')
     @pytest.mark.parametrize('indata,resdata',Excel(f'{CASE_PATH}/token&cookie.xls').red_indata())
+    @allure.title('查看余额--token方法')
     def test_token(self,indata,resdata):
         resps_data = Token(self.token).query(indata)
         print('这个接口返回的：',resps_data['message'])

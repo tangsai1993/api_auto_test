@@ -14,4 +14,5 @@ Host='http://ws.webxml.com.cn'
 url=f'{Host}/WebServices/MobileCodeWS.asmx/getMobileCodeInfo'
 data='mobileCode=13524564335&userID='
 data=requests.post(url,data=data,headers={'Content-Type':'application/x-www-form-urlencoded'})
+print(re.findall(data,'上海移动神州行卡'))
 print(data.text)

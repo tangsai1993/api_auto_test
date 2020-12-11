@@ -13,11 +13,17 @@ from src.Login_cookie import login
 from common.ExcelRed import Excel
 from common.Path import CASE_PATH
 from src.Cookie import cookie
+
+
+@allure.epic('查看余额的史诗级别')
+@allure.feature('查看余额模块')
 class Test_cookie:
     def setup_class(self): #此方法调用一次
         self.cookie=login('userName=admin&password=1234')
-
+    # @pytest.mark('cookie')
+    @allure.story('查看余额')
     @pytest.mark.parametrize('indata,resdata',Excel(f'{CASE_PATH}/token&cookie.xls').red_indata())
+    @allure.title('查看余额--cookie方法')
     def test_cookie(self,indata,resdata):
         resp_data=cookie(self.cookie).query(indata)
         assert resp_data['message']==resdata['message']

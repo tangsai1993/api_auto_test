@@ -14,8 +14,13 @@ from common.ExcelRed import Excel
 from common.Path import fileNma_userIfo
 from conf.setting import PATH_userInfo
 #获取参数
-@pytest.mark.parametrize('indata,redata',Excel(fileNma_userIfo).red_indata())
+# @pytest.mark('userIfo')
+
+@allure.feature('用户登录')
 class Test_UserIfo():
+    @allure.story
+    @allure.title('用户登录')
+    @pytest.mark.parametrize('indata,redata', Excel(fileNma_userIfo).red_indata())
     def test_userIfo(self,indata,redata):
         #调用src包中userInfo接口请求函数
         resp_data=userInfo.userIfo(indata)
