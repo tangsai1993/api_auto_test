@@ -12,13 +12,10 @@ import os
 from src import userInfo
 from common.ExcelRed import Excel
 from common.Path import fileNma_userIfo
-from conf.setting import PATH_userInfo
 #获取参数
-# @pytest.mark('userIfo')
-
 @allure.feature('用户登录')
 class Test_UserIfo():
-    @allure.story
+    @allure.story('测试用户登录')
     @allure.title('用户登录')
     @pytest.mark.parametrize('indata,redata', Excel(fileNma_userIfo).red_indata())
     def test_userIfo(self,indata,redata):
