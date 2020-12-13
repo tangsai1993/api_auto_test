@@ -8,7 +8,12 @@
 '''配置信息'''
 
 #接口请求地址
-HOST = 'http://localhost:8080'
+# windows服务
+# HOST = 'http://localhost:8080'
+
+#linux服务
+HOST = 'http://192.168.146.130:8081/'
+
 
 PATH_register='/pinter/com/register'
 PATH_buy='/pinter/com/buy'
