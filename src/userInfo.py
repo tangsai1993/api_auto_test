@@ -12,7 +12,9 @@ import random
 from common import Common
 from conf.setting import HOST
 from common.get_random import random_20char
+from common.Log import logger
 
+log=logger()
 def userIfo(inData):
     Num_random=random_20char(8)
 
@@ -32,6 +34,10 @@ def userIfo(inData):
     dict_inData['phoneNum']=phoneNum
     # print(dict_inData)
     data = requests.post(URL, json=dict_inData, headers={'content-type': "application/json"})
+    re_url = data.request.url
+    log.info(f'用户登录请求地址为；{re_url}')
+    log.info(f'用户登录请求参数为：{data.request.body}')
+    log.info(f'用户登录返回响应为：{data.json()}')
     print(data.request.url)
     print(data.request.body)
     print(data.json())

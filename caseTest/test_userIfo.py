@@ -12,7 +12,7 @@ import os
 from src import userInfo
 from common.ExcelRed import Excel
 from common.Path import fileNma_userIfo
-#获取参数
+
 @allure.feature('用户登录')
 class Test_UserIfo():
     @allure.story('测试用户登录')
