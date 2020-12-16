@@ -1,0 +1,2 @@
+INFO     root:userInfo.py:38 用户登录请求地址为；http://localhost:8080/pinter/com/userInfo
+INFO     root:userInfo.py:39 用户登录请求参数为：b'{"phoneNum": "13803563926", "optCode": "testfan", "timestamp": "1608031820631", "sign": "76c1302fdb91ddd218930c6e52dc1650"}'

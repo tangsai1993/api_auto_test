@@ -1,0 +1,3 @@
+2020-12-15 19:39:15,894 - userInfo.py[line:38] - INFO:用户登录请求地址为；http://localhost:8080/pinter/com/userInfo
+2020-12-15 19:39:15,895 - userInfo.py[line:39] - INFO:用户登录请求参数为：b'{"phoneNum": "13839780855", "optCode": "testfan", "timestamp": "1608032355860", "sign": "6981902ed0c69d482b63eb4b4e2ddc64"}'
+2020-12-15 19:39:15,895 - userInfo.py[line:40] - INFO:用户登录返回响应为：{'code': '0', 'message': 'success', 'data': {'id': 9960, 'userName': '性能测试', 'password': None, 'age': 69, 'gender': 1, 'phoneNum': '13839780855', 'email': 'beihe@testfan.com', 'address': '北京市昌平区科星西路106号院（国风美唐花园综合楼）3号楼1111', 'createTime': None, 'updateTime': None}}

@@ -1,0 +1,3 @@
+INFO     root:userInfo.py:38 用户登录请求地址为；http://localhost:8080/pinter/com/userInfo
+INFO     root:userInfo.py:39 用户登录请求参数为：b'{"phoneNum": "13861880465", "optCode": "testfan", "timestamp": "1608032369848", "sign": "b17cd4109daa479fa0727a24ae50a1e9"}'
+INFO     root:userInfo.py:40 用户登录返回响应为：{'code': '0', 'message': 'success', 'data': {'id': 9044, 'userName': '性能测试', 'password': None, 'age': 49, 'gender': 1, 'phoneNum': '13861880465', 'email': 'beihe@testfan.com', 'address': '北京市昌平区科星西路106号院（国风美唐花园综合楼）3号楼1111', 'createTime': None, 'updateTime': None}}
