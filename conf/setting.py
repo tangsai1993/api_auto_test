@@ -9,10 +9,10 @@
 
 #接口请求地址
 # windows服务
-HOST = 'http://localhost:8080'
+# HOST = 'http://localhost:8080'
 
 #linux服务--家里的机器
-# HOST = 'http://192.168.146.130:8081/'
+HOST = 'http://192.168.146.130:8081/'
 
 
 PATH_register='/pinter/com/register'
